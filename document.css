@@ -1,0 +1,21 @@
+.container-2{
+    width: 60%;
+    height:150vh;
+    margin:0 auto;
+    border:3px solid black
+}
+.title-2{
+    text-decoration:underline;
+}
+tr img{
+    width:40px;
+    height:40px;
+}
+table{
+    margin:20px auto;
+    width:80%;
+    box-shadow:0 0 10px 5px black;
+}
+.r1{
+    text-align: center;
+}

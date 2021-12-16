@@ -1,0 +1,242 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Chakra Petch', sans-serif;
+    box-sizing: border-box;
+    font-size:1rem;
+}
+/* head and navbar */
+.title{
+    display:none;
+}
+.head{
+    border:1px solid black;
+    background-color: black;
+    color:rgb(0,255,0);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    height:auto;
+    min-height:80px;
+    position:relative;
+}
+.nav-toggle{
+    position:absolute;
+    top:20px;
+    right:10px;
+    font-size:1.5rem;
+    cursor:pointer;
+}
+.logo{
+    position:absolute;
+    top:-10px;
+    left:10px;
+    text-align: center;
+}
+ul{
+    justify-content:center;
+    flex-direction:column;
+    padding-left:0;
+    display:none;
+}
+ul li{
+    list-style:none;
+    cursor:pointer;
+    margin:20px;
+    text-align:right;
+    margin-right:-30px;
+}
+.btn{
+    color:rgb(0,255,0);
+    background-color:black;
+    border:3px solid rgb(0,255,0);
+    padding:5px 30px;
+    border-radius:10px;
+}
+.btn:hover{
+    opacity:0.5;
+}
+.active{
+    display:flex;
+}
+/* content  */
+.container {
+    width: 90%;
+    height:auto;
+    min-height:100vh;
+    margin: 2px auto;
+    border:5px solid black;
+}
+h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size:20pt;
+}
+/* show image */
+.slide{
+    background-color: black;
+}
+.slider{
+    width:100%;
+    height: 500px;
+    position:relative;
+    margin:auto;
+    text-align: center;
+}
+.slider img{
+    width:90%;
+    height:500px;
+    object-fit:cover;
+    border:5px solid rgb(0,255,0);
+    margin-top:15px;
+    box-shadow:0 0 10px 5px rgb(0,255,0);
+}
+.dots{
+    text-align:center;
+    left:50%;
+    margin:20px 0 0 0;
+}
+.dot{
+    margin:0px auto;
+    border:1px solid black;
+    width:15px;
+    height:15px;
+    margin:5px 2px;
+    background-color:lightgray;
+    border-radius:50%;
+    display:inline-block;
+    transition:background-color 0.2s ease;
+}
+.faid{
+    animation-name:faid;
+    animation-duration:1.5s;
+}
+/* news detail  */
+.news img {
+    vertical-align:middle;
+}
+.news {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    row-gap: 20px;
+    height:auto;
+}
+.box-1{
+    margin:5px auto;
+    width: 80%;
+    height:200px;
+    display:block;
+    overflow:hidden;
+    text-align:center;
+}
+.news img{
+    width:150px;
+    height:130px;
+    object-fit:cover;
+    margin:0px auto;
+    padding:0px auto;
+    box-shadow:0 0 5px 2px #000;
+}
+.news-title{
+    text-align:left;
+    padding:5px;
+}
+/* student news */
+.std-news{
+    text-align:center;
+    width:100%;
+    padding:0 10px;
+    margin:0 auto;
+}
+table{
+    width:80%;
+    border-collapse:collapse;
+    border:1px solid rgb(0,255,0);
+    margin:10px auto;
+
+}
+th,td{
+    border:1px solid black;
+    align-items:center;
+    padding:8px;
+}
+th{
+    background-color:black;
+    color:rgb(0,255,0);
+}
+/* footer   */
+.footer{
+    width:100%;
+    height:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:2px 0 0 0;
+    padding:5px 5%;
+    background-color:black;
+    color:rgb(0,255,0);
+}
+.address{
+    text-align:right;
+}
+.faculty{
+    text-align:center;
+}
+/* anaimation */
+@keyframes faid{
+    from{
+        opacity:.4;
+    }
+    to{
+        opacity:1;
+    }
+}
+@media (min-width:500px) and (max-width:700px) {
+    #js-menu{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        column-gap:20px;
+    }
+    .head{
+        height:auto;
+    }
+    .nav-toggle{
+        display:none;
+    }
+    ul li{
+        text-align:center;
+        cursor: pointer;
+    }
+}
+@media (min-width:700px){
+    .nav-toggle{
+        display:none;
+    }
+    #js-menu{
+        display:flex;
+        flex-direction:row;
+        position:absolute;
+        top:10px;
+        right:30px;
+    }
+    .btn{
+        padding:5px 15px;
+        margin:0 10px;
+    }
+    ul li a{
+        cursor: pointer;
+    }
+    .news{
+        grid-template-columns:1fr 1fr 1fr;
+    }
+}
+@media (min-width:1200px){
+    .std-news{
+        width:80%;
+    }
+    .news{
+        grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
